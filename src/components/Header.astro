@@ -1,0 +1,14 @@
+---
+import logo from '../assets/logo.jpeg'
+import { Image } from 'astro:assets';
+---
+
+<main class="flex justify-around m-auto items-center gap-x-96 pt-10 pb-28 w-[1440px]">
+  <span><Image src={logo} alt="logo" class="rounded-full size-16 object-cover mb-3"></span>
+  <nav class="flex gap-x-10 text-lg ">
+    <a href="/" class="opacity-60 hover:opacity-100">Home</a>
+    <a href="#experience" class="opacity-60 hover:opacity-100">Experience</a>
+    <a href="#projects" class="opacity-60 hover:opacity-100">Projects</a>
+    <a href="#contact" class="opacity-60 hover:opacity-100">Contact</a>
+  </nav>
+</main>

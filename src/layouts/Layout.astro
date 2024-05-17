@@ -1,0 +1,58 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import '@fontsource-variable/jetbrains-mono';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<ViewTransitions/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+		<Header/>
+		<slot />
+	</body>
+</html>
+
+
+<style is:global>
+	:root {
+		margin: 0%;
+		padding: 0%;
+		box-sizing: border-box;
+		color-scheme: light dark;
+	}
+	body{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	html {
+		font-family: 'JetBrains Mono Variable', monospace; 
+		overflow-x: hidden;
+		scroll-behavior: smooth; 
+		background-color: rgb(10, 10, 10);
+	}
+
+	@media (prefers-reducer-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+</style>
+
+
