@@ -1,58 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import LinkedIn from '../assets/icons/LinkedIn.astro';
-import Github from '../assets/icons/Github.astro';
-import Gmail from '../assets/icons/Gmail.astro';
-import Briefcase from '../assets/icons/Briefcase.astro'
-import IconButton from '../assets/icons/IconButton.astro'
-import Experience from '../components/Experience.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Experience from '../components/experience/Experience.astro';
+import Projects from '../components/projects/Projects.astro';
+
 
 ---
 
-<Layout title="Portfolio de Pablo Alvarez - Programador y Desarrollador Web">
-	
-	<main class="text-white items-center w-[900px] m-auto ">
-
+<Layout title="Pablo Alvarez's Portfolio - Programmer and Web Developer">
+	<main class="text-white items-center md:w-[500px] lg:w-[700px] mx-2   md:ml-0 md:mr-0">
 		<div>
-			<section>
-				<section class="flex items-center gap-x-6">
-					<h1 class="text-6xl font-bold pb-5">Hí, I'm Pablo</h1>
-					<span class=" border border-green-700 bg-green-300 text-green-900 px-2 py-px">available to work</span>
-				</section>
-				<section>				
-					<p>I am a web developer with over 3 years of experience. <span class="text-blue-300/80">from Buenos Aires, Argentina</span>.</p>
-					<p>I focus on optimizing user experience and turning dreams into reality.</p>
-				</section>
-			</section>
-			<section class="pt-5">
-				<nav class="flex items-center gap-x-5">
-					<IconButton href="https://www.linkedin.com/in/pablopalvarez/" padding="p-3" hover="hover:border-white">
-						<LinkedIn/>
-    				<span>Linkedin</span>
-					</IconButton>
-					<IconButton href="https://github.com/AlvarezPablo1" padding="p-3" hover="hover:border-white">
-						<Github/>
-						<span >Github</span>
-					</IconButton>
-					<IconButton href="mailto:pipualvarez1@gmail.com" padding="p-3" hover="hover:border-white">
-						<Gmail/>
-						<span>pipualvarez1@gmail.com</span>
-					</IconButton>
-				</nav>
-			</section>
+			<AboutMe/>
 		</div>
 
 		<div id="experience" class="mt-40">
-			<section class="flex items-center gap-x-3 pb-10">
-				<Briefcase/>
-				<h2  class="text-4xl font-semibold ">Work Experiences</h2>
-			</section>
 			<Experience/>
 		</div>
 
-
-		<div id="projects">
-
+		<div id="projects" class="mt-40">
+			<Projects/>
 		</div>
+		
 	</main>
 </Layout>

@@ -1,0 +1,32 @@
+---
+import Github from "../assets/icons/Github.astro";
+import Gmail from "../assets/icons/Gmail.astro";
+import IconButton from "./button/IconButton.astro";
+import LinkedIn from "../assets/icons/LinkedIn.astro";
+---
+  <section>
+    <section class="flex flex-col-reverse md:flex-row items-start md:items-center gap-x-4 mb-5">
+      <h1 class="text-4xl min-[425px]:text-5xl md:text-4xl lg:text-6xl font-bold">Hí, I'm Pablo</h1>
+      <span class=" rounded bg-green-300 text-sm text-green-900 px-2 py-px">available to work</span>
+    </section>
+    <section class="text-pretty">				
+      <p>I am a web developer with over 3 years of experience. <span class="text-blue-400/80">from Buenos Aires, Argentina</span>.</p>
+      <p>I focus on optimizing user experience and turning dreams into reality.</p>
+    </section>
+  </section>
+  <section class="pt-5">
+    <nav class="flex flex-wrap md:flex-row items-start gap-y-3 gap-x-5">
+      <IconButton href="https://www.linkedin.com/in/pablopalvarez/" padding="p-3" hover="hover:border-white">
+        <LinkedIn/>
+        <span>Linkedin</span>
+      </IconButton>
+      <IconButton href="https://github.com/AlvarezPablo1" padding="p-3" hover="hover:border-white">
+        <Github/>
+        <span >Github</span>
+      </IconButton>
+      <IconButton href="mailto:pipualvarez1@gmail.com" padding="p-3" hover="hover:border-white">
+        <Gmail/>
+        <span>pipualvarez1@gmail.com</span>
+      </IconButton>
+    </nav>
+  </section>

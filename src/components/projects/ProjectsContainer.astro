@@ -1,0 +1,42 @@
+---
+import ProjectItem from "./ProjectItem.astro"
+
+
+
+const PROJECTS = [
+  {
+    project: "Bio Soil - UO-solution",
+    description: "Bio Soil is a landing page about products that improve people's productivity and rest.",
+    tecnologies: ["Next.js", "React", "JavaScript", "Figma", "Tailwind CSS"],
+    github: "https://github.com/AlvarezPablo1/Bio-Soil",
+    deploy:"https://bio-soil.vercel.app/",
+    img: '/project-bioSoil.jpeg'
+  },
+  {
+    project: "Cookies - UO-solution",
+    description: "Cookies is a landing page about weed",
+    tecnologies: ["Next.js", "React", "JavaScript", "Figma", "Tailwind CSS"],
+    github: "https://github.com/AlvarezPablo1/Cookies",
+    deploy:"https://cookies-beige.vercel.app/",
+    img: '/project-cookies.jpeg'
+  },
+  {
+    project: "Remedy - UO-solution",
+    description: "Remedy is a landing page about weed",
+    tecnologies: ["Next.js", "React", "JavaScript", "Figma", "Tailwind CSS"],
+    github: "https://github.com/AlvarezPablo1/Remedy",
+    deploy:"https://remedy-lake.vercel.app/",
+    img: '/project-Remedy.jpeg'
+  },
+  
+]
+---
+
+<ol class="">     
+  {PROJECTS.map(project =>
+    <li class="mb-10 ms-4">
+      <ProjectItem {...project}/>
+    </li>
+  )}
+</ol>
+

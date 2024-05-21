@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets'
+import IconButton from '../button/IconButton.astro'
+import Github from '../../assets/icons/Github.astro'
+
+interface Props {
+  project: string,
+  description: string,
+  img: string,
+  github: string,
+  deploy: string,
+  tecnologies?: string[]
+}
+
+const { img, github, deploy, project, description, tecnologies} = Astro.props
+---
+
+<h3 class="text-xl font-bold text-blue-400/80 ">{project}</h3>
+<p class="mb-4 text-base font-normal text-gray-400 text-pretty">{description}</p>
+  <nav class="flex flex-wrap gap-x-3 gap-y-2 py-3 text-sm">
+    {
+      tecnologies?.map(tecnologies =>
+      <IconButton padding="px-2 py-px">
+        {tecnologies}
+      </IconButton>
+      )
+    }
+  </nav>
+  <a href={deploy} target="_blank" class="">
+    <img src={img} alt={project} class="hover:scale-95 transition rounded-xl shadow-lg shadow-white/10">
+  </a>
+  <div class="flex mt-3">
+    <IconButton href={github} padding="p-2" hover="hover:border-white">
+      <Github/>
+      <span >Github</span>
+    </IconButton>
+  </div>
