@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import AboutMe from '../components/AboutMe.astro';
 import Experience from '../components/experience/Experience.astro';
 import Projects from '../components/projects/Projects.astro';
-
+import Presentation from '../components/Presentation.astro';
+import AboutMe from '../components/aboutMe/AboutMe.astro'
 
 ---
 
 <Layout title="Pablo Alvarez's Portfolio - Programmer and Web Developer">
 	<main class="text-white items-center md:w-[500px] lg:w-[700px] mx-2   md:ml-0 md:mr-0">
 		<div>
-			<AboutMe/>
+			<Presentation/>
 		</div>
 
 		<div id="experience" class="mt-40">
@@ -21,5 +21,8 @@ import Projects from '../components/projects/Projects.astro';
 			<Projects/>
 		</div>
 		
+		<div id="aboutMe" class="my-40">
+			<AboutMe/>
+		</div>
 	</main>
 </Layout>

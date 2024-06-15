@@ -36,6 +36,7 @@ const { title } = Astro.props;
 		padding: 0%;
 		box-sizing: border-box;
 		color-scheme: light dark;
+		scrollbar-width: none;
 	}
 	body{
 		display: flex;
@@ -50,6 +51,12 @@ const { title } = Astro.props;
 		background-color: rgb(10, 10, 10);
 	}
 
+	.AboutMePhoto{
+		mask-image: linear-gradient(
+			black 80%,
+			transparent
+		);
+	}
 	@media (prefers-reducer-motion: reduce){
 		html{
 			scroll-behavior: auto;
