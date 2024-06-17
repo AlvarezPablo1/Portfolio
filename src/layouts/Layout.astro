@@ -47,7 +47,6 @@ const { title } = Astro.props;
 	html {
 		font-family: 'JetBrains Mono Variable', monospace; 
 		overflow-x: hidden;
-		scroll-behavior: smooth; 
 		background-color: rgb(10, 10, 10);
 	}
 
@@ -56,11 +55,6 @@ const { title } = Astro.props;
 			black 80%,
 			transparent
 		);
-	}
-	@media (prefers-reducer-motion: reduce){
-		html{
-			scroll-behavior: auto;
-		}
 	}
 </style>
 

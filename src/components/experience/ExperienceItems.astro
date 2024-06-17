@@ -1,5 +1,5 @@
 ---
-import IconButton from '../button/IconButton.astro'
+import Icon from '../button/Icon.astro'
 
 interface Props {
   date: string,
@@ -16,9 +16,9 @@ const { date, project, description, tecnologies} = Astro.props
   <nav class="flex flex-wrap gap-x-3 gap-y-2 py-3 text-sm">
     {
       tecnologies?.map(tecnologies =>
-      <IconButton padding="px-2 py-px">
+      <Icon padding="px-2 py-px">
         {tecnologies}
-      </IconButton>
+      </Icon>
       )
     }
   </nav>
